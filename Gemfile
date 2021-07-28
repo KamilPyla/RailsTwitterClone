@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.7'
 # Test application
 gem 'rexml'
 gem 'minitest-reporters'
+gem 'rails-controller-testing'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
