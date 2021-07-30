@@ -24,6 +24,11 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# Faker - create fake account
+gem 'faker'
+gem 'will_paginate',           '3.3.0'
+gem 'bootstrap-will_paginate'
+
 # Test application
 gem 'rexml'
 gem 'minitest-reporters'
