@@ -13,6 +13,6 @@
 <%= f.label :password_confirmation, 'Confirmation' %>
 <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-<%= f.submit 'Create my accoutn', class: 'btn btn-primary' %>
+<%= f.submit yield(:button_name), class: 'btn btn-primary' %>
 
 <% end %>
