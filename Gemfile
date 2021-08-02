@@ -26,6 +26,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Faker - create fake account
 gem 'faker'
+# gem 'robocop-faker'
 gem 'will_paginate',           '3.3.0'
 gem 'bootstrap-will_paginate'
 

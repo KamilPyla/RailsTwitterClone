@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+blue:
+  content: 'I am blue'
+  created_at: <%= 10.minutes.ago %>
+  user: michael
+
+green:
+  content: 'I am green'
+  created_at: <%= 1.hour.ago %>
+  user: michael
+
+yellow:
+  content: 'I am yellow'
+  created_at: <%= 1.hour.ago %>
+  user_id: 1
+  user: michael
+
+most_recent:
+  content: 'Most recent'
+  created_at: <%= Time.zone.now %>
+  user: michael
+  user_id: 1
+
+<% 30.times do |n| %>
+micropost_<%= n %>:
+  content: <%= Faker::Lorem.sentence %>
+  created_at: <%= 42.days.ago %>
+  user: michael
+<% end %>
