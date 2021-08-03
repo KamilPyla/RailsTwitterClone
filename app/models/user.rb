@@ -43,7 +43,7 @@ class User < ApplicationRecord
   end
 
   def male?
-    !gender == 'm'
+    self.gender == 'm'
   end
 
   private
