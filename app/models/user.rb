@@ -2,7 +2,9 @@ class User < ApplicationRecord
   has_many :microposts, dependent: :destroy
   attr_accessor :remember_token
   before_save { email.downcase! }
+  mount_uploader :user_avatar, UserAvatarUploader
   validates :name, presence: true, length: { maximum: 60 }
+  validate :user_avatar_size
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, length: { maximum: 255 },
@@ -38,5 +40,17 @@ class User < ApplicationRecord
 
   def feed
     Micropost.where('user_id = ?', id)
-  end  
+  end
+
+  def male?
+    !gender == 'm'
+  end
+
+  private
+
+  def user_avatar_size
+    if user_avatar.size > 5.megabytes
+      errors.add(:user_avatar, 'should be less than 5 MB')
+    end
+  end
 end
