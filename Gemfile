@@ -26,9 +26,16 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Faker - create fake account
 gem 'faker'
+
 # gem 'robocop-faker'
 gem 'will_paginate',           '3.3.0'
 gem 'bootstrap-will_paginate'
+
+#Carrierwave - image uploader
+gem 'carrierwave', '~> 2.0'
+gem 'mini_magick'
+gem 'fog', '1.36.0'
+
 
 # Test application
 gem 'rexml'
