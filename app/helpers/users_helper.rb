@@ -1,6 +1,7 @@
 module UsersHelper
 
-  def avatar_for(user)
+  def avatar_for(user, options = {size: 80})
+    size = options[:size]
     if user.user_avatar?
       image_tag(user.user_avatar.url, alt: user.name, class: 'avatar')
     else
