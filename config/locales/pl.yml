@@ -1,0 +1,42 @@
+pl:
+  global:
+    header:
+      logo: "Twitter - kopia"
+      home: "Strona główna"
+      help: "Pomoc"
+      users: "Użytkownicy"
+      account: "Konto"
+        profile: "Profil"
+        settings: "Ustawienia"
+        logout: "Wyloguj"
+      login: "Zaloguj się" 
+    footer:
+      about: "O nas"
+      contact: "Kontakt"
+      news: "Wiadomości"
+  about:
+    title: "O nas"
+  
+  contact:
+    title: "Kontakt"
+    content: "Skontaktuj się w sprawie poradnika Ruby on Rails przez"
+    site: "stronę internetową."
+
+  help:
+    title: "Pomoc"
+    content_rails: "Zdobądź pomoc w Ruby on Rails na stronie"
+      link: "Poradnik Rails seckcja pomocy."
+    content_sample: "Żeby uzyskać pomoc przy tworzeniu tej strony, wejdź w"
+      link: "link"
+  
+  home:
+    title: "Strona główna"
+    posts: "Posty"
+    welcome: "Witam w aplikacji Twitter-Clone"
+    content_html: "To jest strona domowa
+    <a href="http://www.railstutorial.org/">poradnika Ruby on Rails</a>
+    twitter-clone."
+    sign_up: "Zarejestruj się teraz!"
+    
+
+
