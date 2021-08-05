@@ -1,0 +1,97 @@
+it:
+  global:
+    language: "Lingua"
+    title: "Clone Twitter di Ruby on Rails Tutorial"
+    header:
+      logo: "Twitter - clone"
+      home: "Casa"
+      help: "Aiuto"
+      users: "Utenti"
+      account:
+        name: "Conto"
+        profile: "Profilo"
+        settings: "Impostazioni"
+        logout: "Esci"
+      login: "Entra" 
+    footer:
+      about: "Circa"
+      contact: "Contatto"
+      news: "Notizie"
+  about:
+    title: "Circa"
+  contact:
+    title: "Contatto"
+    content: "Contatta il tutorial di Ruby on Rails sull'app Twitter al"
+    site: "pagina contatti."
+  help:
+    title: "Aiuto"
+    content_rails: "Ricevi aiuto sul tutorial di Ruby on Rails al"
+    link_rails: "Sezione guida dell'esercitazione sui binari"
+    content_sample: "Per ottenere assistenza su questa app di Twitter, consulta la "
+    link_sample: "Libro tutorial Ruby on Rails"
+  home:
+    title: "Casa"
+    posts: "Post"
+    welcome: "Benvenuto nel clone di Twitter"
+    sign_up: "Registrati ora!"
+    content_html: "Questa è la home page del <a href=%{link}> tutorial di Ruby on Rails </a> - clone di twitter"
+  microposts:
+    delete: "elimina"
+    confirm_del: "Sei sicuro?"
+  time_ago: "Pubblicato %{time} fa."
+  session:
+    login:
+      title: "Accedi"
+      new?: "Nuovo utente?"
+  forms:
+    name: "Nome"
+    email: "Email"
+    gender: "Genere"
+    male: "Maschio"
+    female: "Femmina"
+    password: "Password"
+    password_confirmation: "Conferma"
+    user_avatar: "Scegli la tua immagine del profilo (opzionale)"
+    remember_me: "Ricordati di me."
+    log_in: "Entra"
+    edit_title: "Aggiorna il mio profilo"
+    edit_button: "Modifiche sicure"
+    signup_title: "Iscriviti"
+    signup_button: "Crea il mio account"
+    micropost:
+      content: "Cosa stai pensando a %{name}?"
+      button: "Posta"
+  account:
+    followers: "Seguaci"
+    following: "Seguente"
+    my_profile: "Visualizza il mio profilo"
+    posts: "Post"
+    follow: "Segui"
+    unfollow: "Smetti di seguire"
+  admin:
+    delete_account: "Elimina account"
+    delete_account_confirm: "Sei sicuro?"
+  users:
+    all_users: "Tutti gli utenti"
+
+  will_paginate:
+    next_label: Successivo &#8594;
+    page_entries_info:
+      multi_page: Visualizzati %{model} %{from} - %{to} di %{count} in totale
+      multi_page_html: Visualizzati %{model} <b>%{from}&nbsp;-&nbsp;%{to}</b> di </b>%{count}</b> in totale
+      single_page: 
+      single_page_html: 
+    page_gap: "&hellip;"
+    previous_label: "&#8592; Precedente"
+
+  flash:
+    log_in: "Per favore accedi!"
+    session:
+      error: "Combinazione email/password non valida"
+    microposts:
+      created: "Micropost creato"
+      delete: "Micropost cancellato"
+    users:
+      signup: "Benvenuto nell'app clone di Twitter!"
+      delete: "Utente eliminato"
+      update: "Profilo aggiornato"
