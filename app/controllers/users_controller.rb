@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       log_in @user
-      flash[:success] = "Welcome to the Sample App!"
+      flash[:success] = t'flash.users.signup'
       redirect_to @user
     else
       render 'new'
@@ -20,7 +20,7 @@ class UsersController < ApplicationController
 
   def destroy
     User.find(params[:id]).destroy
-    flash[:success] = 'User deleted'
+    flash[:success] = t'flash.users.delete'
     redirect_to users_url
   end
 
@@ -41,7 +41,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      flash[:success] = "Profile updated"
+      flash[:success] = t'flash.users.update'
       redirect_to @user
     else
       render 'edit'
@@ -49,14 +49,14 @@ class UsersController < ApplicationController
   end
 
   def following
-    @title = 'Following'
+    @title = t'account.following'
     @user = User.find(params[:id])
     @users = @user.following.paginate(page: params[:page])
     render 'show_follow'
   end
 
   def followers
-    @title = 'Followers'
+    @title = t'account.followers'
     @user = User.find(params[:id])
     @users = @user.followers.paginate(page: params[:page])
     render 'show_follow'
@@ -75,7 +75,7 @@ class UsersController < ApplicationController
   def logged_in_user
     unless logged_in?
       store_location
-      flash[:danger] = 'Please log in.'
+      flash[:danger] = t'flash.log_in'
       redirect_to login_url
     end
   end

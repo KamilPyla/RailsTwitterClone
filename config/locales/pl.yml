@@ -1,11 +1,14 @@
 pl:
   global:
+    language: Język
+    title: "Ruby on Rails Poradnik - Twitter - Kopia"
     header:
       logo: "Twitter - kopia"
       home: "Strona główna"
       help: "Pomoc"
       users: "Użytkownicy"
-      account: "Konto"
+      account:
+        name: "Konto"
         profile: "Profil"
         settings: "Ustawienia"
         logout: "Wyloguj"
@@ -16,27 +19,85 @@ pl:
       news: "Wiadomości"
   about:
     title: "O nas"
-  
   contact:
     title: "Kontakt"
     content: "Skontaktuj się w sprawie poradnika Ruby on Rails przez"
     site: "stronę internetową."
-
   help:
     title: "Pomoc"
-    content_rails: "Zdobądź pomoc w Ruby on Rails na stronie"
-      link: "Poradnik Rails seckcja pomocy."
-    content_sample: "Żeby uzyskać pomoc przy tworzeniu tej strony, wejdź w"
-      link: "link"
-  
+    content_rails: "Uzyskaj pomoc w Ruby on Rails na stronie"
+    link_rails: "Poradnik Rails seckcja pomocy."
+    content_sample: "Żeby uzyskać pomoc przy tworzeniu tej strony, kliknij w link"
+    link_sample: "link"
   home:
     title: "Strona główna"
     posts: "Posty"
-    welcome: "Witam w aplikacji Twitter-Clone"
-    content_html: "To jest strona domowa
-    <a href="http://www.railstutorial.org/">poradnika Ruby on Rails</a>
-    twitter-clone."
+    welcome: "Witamy w aplikacji Twitter-Clone"
     sign_up: "Zarejestruj się teraz!"
+    content_html: "Stona domowa dla <a href=%{link}> Ruby on Rails poradnik </a> - kopia twittera"
+  microposts:
+    delete: "usuń"
+    confirm_del: "Jesteś pewien?"
+  time_ago: "Utworzono %{time} temu"
+  session:
+    login:
+      title: "Logowanie"
+      new?: "Nie masz konta?"
+  forms:
+    name: Imię
+    email: Email
+    gender: Płeć
+    male: "Mężczyzna"
+    female: "Kobieta"
+    password: Hasło
+    password_confirmation: "Powtórz hasło"
+    user_avatar: "Wybierz swoje zdjęcie profilowe (opcjonalne)"
+    remember_me: Zapamiętaj mnie.
+    log_in: Zaloguj się
+    edit_title: "Zaktualizuj swój profil"
+    edit_button: "Zapisz zmiany"
+    signup_title: "Rejestracja"
+    signup_button: "Zarejestruj się"
+    micropost:
+      content: "O czym myślisz %{name}?"
+      button: "Opublikuj"
+  account:
+    followers: "Obserwujący"
+    following: "Obserwowani"
+    my_profile: 'Zobacz mój profil'
+    posts: 'Posty'
+    follow: "Obserwuj"
+    unfollow: "Przestań obserwować"
+  admin:
+    delete_account: "Usuń konto"
+    delete_account_confirm: "Jesteś pewien?"
+  users:
+    all_users: "Wszyscy użytkownicy"
+  will_paginate:
+    next_label: Następna &#8594;
+    page_entries_info:
+      multi_page: Wyświetlam %{model} %{from} - %{to} z %{count} wszystkich
+      multi_page_html: Wyświetlam %{model} <b>%{from}&nbsp;-&nbsp;%{to}</b> z <b>%{count}</b> wszystkich
+      single_page:
+        few: Wyświetlam %{count} %{model}
+        one: Wyświetlam 1 %{model}
+        other: Wyświetlam wszystkie %{count} %{model}
+      single_page_html:
+        few: Wyświetlam <b>%{count}</b> %{model}
+        one: Wyświetlam <b>1</b> %{model}
+        other: wyświetlam <b>wszystkie&nbsp;%{count}</b> %{model}
+    page_gap: "&hellip;"
+    previous_label: "&#8592; Poprzednia"
+  flash:
+    log_in: "Zaloguj się!"
+    session:
+      error: "Błędny email/hasło!"
+    microposts:
+      created: "Utworzono post"
+      delete: "Usunięto post"
+    users:
+      signup: "Witamy w aplikacji Twitter - Kopia!"
+      delete: "Usunięto użytkownika"
+      update: "Profil zaktualizowany"
+
     
-
-

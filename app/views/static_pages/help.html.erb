@@ -1,10 +1,8 @@
-<% provide(:title, t"help.title") %>
-<h1><%= t'help.title'%></h1>
+<% provide(:title, t('help.title')) %>
+<h1><%= t('help.title')%></h1>
 <p>
-  Get help on the Ruby on Rails Tutorial at the
   <%= t'help.content_rails'%>
-  <a href="http://www.railstutorial.org/#help"><%= t'help.content_rails.link'%>Rails Tutorial help section</a>.
-  To get help on this sample app, see the <%= t'help.content_sample'%>
-  <a href="http://www.railstutorial.org/book"><em>Ruby on Rails Tutorial <%= t'help.content_sample.link'%> </em>
-  book</a>.
+  <a href="http://www.railstutorial.org/#help"><%= t'help.link_rails'%></a>.
+  <%= t'help.content_sample'%>
+  <a href="http://www.railstutorial.org/book"><em><%= t'help.link_sample'%> </em></a>.
 </p>

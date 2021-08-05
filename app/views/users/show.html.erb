@@ -10,14 +10,16 @@
     <section class="stats">
       <%= render 'shared/stats' %>
     </section>
-    <section class="micropost_form">
-      <%= render 'shared/micropost_form'%>
-    </section>
+    <% if @user == current_user %>
+      <section class="micropost_form">
+        <%= render 'shared/micropost_form'%>
+      </section>
+    <% end %>
   </aside>
   <div class="col-md-8">
     <%= render 'follow_form' if logged_in? %>
     <% if @user.microposts.any? %>
-      <h3> Microposts (<%= @user.microposts.count %>) </h3>
+      <h3> <%= t('account.posts')%> (<%= @user.microposts.count %>) </h3>
       <%= will_paginate @microposts %>
       <ol class="microposts">
         <%= render @microposts %>

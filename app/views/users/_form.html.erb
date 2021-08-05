@@ -1,22 +1,22 @@
 <%= form_for(@user, html: { multipart: true }) do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
 
-<%= f.label :name %>
+<%= f.label :name, t('forms.name') %>
 <%= f.text_field :name, class: 'form-control' %>
 
-<%= f.label :email %>
+<%= f.label :email, t('forms.email') %>
 <%= f.email_field :email, class: 'form-control' %>
  
-<%= f.label :gender %>
-<%= f.select :gender, [['Male', 'm'], ['Female', 'f']], {}, class: 'form-control' %>
+<%= f.label :gender, t('forms.gender') %>
+<%= f.select :gender, [['',''],[t('forms.male'), 'm'], [t('forms.female'), 'f']], {}, class: 'form-control' %>
 
-<%= f.label :password %>
+<%= f.label :password, t('forms.password') %>
 <%= f.password_field :password, class: 'form-control' %>
 
-<%= f.label :password_confirmation, 'Confirmation' %>
+<%= f.label :password_confirmation, t('forms.password_confirmation') %>
 <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-<%= f.label :user_avatar, 'Choose your profile picture (optional)' %>
+<%= f.label :user_avatar, t('forms.user_avatar') %>
 <span class="picture">
   <%= f.file_field :user_avatar, accept: 'image/jpeg, image/gif, image/png' %>
 </span>

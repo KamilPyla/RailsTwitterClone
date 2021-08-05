@@ -1,0 +1,87 @@
+cn:
+  global:
+    language: 語
+    title: “Ruby on Rails 教程 Twitter 克隆”
+    header:
+      logo: 推特 - 克隆
+      home: 家
+      help: 幫助
+      users: 用戶
+      account:
+        name: 賬戶
+        profile: 個人資料
+        settings: 設置
+        logout: 登出
+      login: 登錄
+    footer:
+      about: 關於
+      contact: 聯繫方式
+      news: 新聞
+  about:
+    title: 關於
+  contact:
+    title: "聯繫方式"
+    content: "聯繫 Ruby on Rails 教程，了解 twitter 應用程序"
+    site: “聯繫頁面。”
+  help:
+    title: "幫助"
+    content_rails: "在 Ruby on Rails 教程中獲取幫助"
+    link_rails: "Rails 教程幫助部分"
+    content_sample: “要獲得有關此 Twitter 應用程序的幫助，請參閱“
+    link_sample: "Ruby on Rails 教程書"
+  home:
+    title: "家"
+    posts: "帖子"
+    welcome: "歡迎使用 Twitter 克隆"
+    sign_up: "“立即註冊！"
+    content_html: "“這是 <a href=%{link}> Ruby on Rails 教程 </a> - twitter 克隆的主頁"
+  microposts:
+    delete: "刪除"
+    confirm_del: "你確定？"
+  time_ago: "%{time} 前發布。"
+  session:
+    login:
+      title: "登錄"
+      new?: "新用戶？"
+  forms:
+    name: "姓名"
+    email: "電子郵件"
+    gender: "性別"
+    male: "男"
+    female: "女"
+    password: "密碼"
+    password_confirmation: "確認"
+    user_avatar: "選擇你的頭像（可選）"
+    remember_me: "記住我。"
+    log_in: "登錄"
+    edit_title: "更新我的個人資料"
+    edit_button: "安全更改"
+    signup_title: "註冊"
+    signup_button: "創建我的帳戶"
+    micropost:
+      content: "你對 %{name} 有什麼看法？"
+      button: "發布"
+  account:
+    followers: "追隨者"
+    following: "正在關注"
+    my_profile: "查看我的個人資料"
+    posts: "帖子"
+    follow: "關注"
+    unfollow: "取消關注"
+  admin:
+    delete_account: "刪除帳戶"
+    delete_account_confirm: "你確定？"
+  users:
+    all_users: "所有用戶"
+  flash:
+    log_in: "請登錄！"
+    session:
+      error: "無效的電子郵件/密碼組合"
+    microposts:
+      created: "已創建微博"
+      delete: "微博已刪除"
+    users:
+      signup: "歡迎使用 Twitter 克隆應用程序！"
+      delete: "用戶已刪除"
+      update: “個人資料已更新”
+

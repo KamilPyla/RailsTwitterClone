@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def full_title(page_title = '')
-    base_title = 'Ruby on Rails Tutorial Static Pages'
+    base_title = t'global.title'
     if page_title.empty?
       base_title
     else
