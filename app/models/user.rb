@@ -12,18 +12,23 @@ class User < ApplicationRecord
   has_many :followers, through: :passive_relationships, source: :follower
 
   attr_accessor :remember_token
-  before_save { email.downcase! }
+
   mount_uploader :user_avatar, UserAvatarUploader
   validates :name, presence: true, length: { maximum: 60 }
   validate :user_avatar_size
-
+  
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, length: { maximum: 255 },
-                    format: { with: VALID_EMAIL_REGEX },
-                    uniqueness: { case_sensitive: false }
-
+  format: { with: VALID_EMAIL_REGEX },
+  uniqueness: { case_sensitive: false }
+  
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }
+
+  GENDERS = ["m","f"]
+  validates :gender, :inclusion=> { in: GENDERS }
+  
+  before_save { email.downcase! }
 
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
