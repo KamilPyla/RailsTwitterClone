@@ -68,7 +68,6 @@ ActiveRecord::Schema.define(version: 2021_08_10_085918) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "password_digest"
     t.string "remember_digest"
-    t.boolean "admin", default: false
     t.string "user_avatar"
     t.string "gender"
     t.index ["email"], name: "index_users_on_email", unique: true
