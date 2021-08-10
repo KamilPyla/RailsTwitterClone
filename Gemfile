@@ -48,6 +48,10 @@ gem 'pry', '~> 0.13.1'
 # transtation
 gem 'rails-i18n'
 
+# active admin
+gem 'activeadmin'
+gem 'devise'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
