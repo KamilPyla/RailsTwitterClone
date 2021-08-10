@@ -4,5 +4,6 @@
     <h1><%= t('session.login.title')%></h1>
     <%= render 'form'%>
     <p><%= t('session.login.new?')%> <%= link_to t('home.sign_up'), signup_path %></p>
+    <p><%= link_to 'admin', admin_root_path %>
   </div>
 </div>
