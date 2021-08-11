@@ -37,3 +37,6 @@ yarn-debug.log*
 
 # Ignore uploaded pictures
 /public/uploads
+
+# Ignore database config file
+/config/database.yml
