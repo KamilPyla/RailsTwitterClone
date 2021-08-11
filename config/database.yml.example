@@ -1,0 +1,32 @@
+# PostgreSQL. Versions 9.3 and up are supported.
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: static_pages_development
+
+  # The specified database role being used to connect to postgres.
+  # To create additional roles in postgres see `$ createuser --help`.
+  # When left blank, postgres will use the default role. This is
+  # the same name as the operating system user running Rails.
+
+  username: username # Please type your username in Postgresql
+
+  # The password associated with the postgres role (username).
+  password: password 
+
+test:
+  <<: *default
+  database: static_pages_test
+
+production:
+  <<: *default
+  database: static_pages_production
+  username: static_pages
+  password: <%= ENV['STATIC_PAGES_DATABASE_PASSWORD'] %>
