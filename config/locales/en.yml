@@ -38,6 +38,7 @@ en:
   microposts:
     delete: "delete"
     confirm_del: "You sure?"
+    report: "report"
   time_ago: "Posted %{time} ago."
   session:
     login:

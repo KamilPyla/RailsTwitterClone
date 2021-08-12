@@ -1,0 +1,6 @@
+<h1> Report post </h1>
+<%= form_for(@micropost, html: { multipart: true }) do |f| %>
+<%= render 'shared/error_messages', object: f.object %>
+<p><%= "true" if !@micropost.reported %></p>
+
+<% end %>

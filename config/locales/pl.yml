@@ -37,6 +37,7 @@ pl:
     content_html: "Stona domowa dla <a href=%{link}> Ruby on Rails poradnik </a> - kopia twittera"
   microposts:
     delete: "usuń"
+    report: "report"
     confirm_del: "Jesteś pewien?"
   time_ago: "Utworzono %{time} temu"
   session:

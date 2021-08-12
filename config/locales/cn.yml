@@ -37,6 +37,7 @@ cn:
     content_html: "“這是 <a href=%{link}> Ruby on Rails 教程 </a> - twitter 克隆的主頁"
   microposts:
     delete: "刪除"
+    report: "report"
     confirm_del: "你確定？"
   time_ago: "%{time} 前發布。"
   session:

@@ -37,6 +37,7 @@ it:
     content_html: "Questa è la home page del <a href=%{link}> tutorial di Ruby on Rails </a> - clone di twitter"
   microposts:
     delete: "elimina"
+    report: "report"
     confirm_del: "Sei sicuro?"
   time_ago: "Pubblicato %{time} fa."
   session:

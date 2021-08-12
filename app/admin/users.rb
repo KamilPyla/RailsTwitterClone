@@ -16,7 +16,11 @@ ActiveAdmin.register User do
   end
 
   permit_params :name, :email, :password, :password_confirmation, :user_avatar, :gender
-  #
+  
+  action_item :show_posts, only: :show do
+    link_to "Show Posts", "#"
+  end
+
   # or
   #
   # permit_params do
