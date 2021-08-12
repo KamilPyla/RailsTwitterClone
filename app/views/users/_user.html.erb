@@ -1,7 +1,6 @@
-    <li>
-      <%= avatar_for(user) %>
-      <%= link_to user.name, user %>
-      <% if current_user.admin? && !current_user?(user)%>
-      | <%= link_to t('admin.delete_account'), user, method: :delete, data: { confirm: t('admin.delete_account_confirm')} %>
-      <% end %>
-    </li>
+<li>
+  <%= avatar_for(user) %>
+  <%= link_to user.name, user %>
+  <p> <%= user.following.count %>  <%= link_to t('account.following'), following_user_path(user) %> </p>
+  <p> <%= user.followers.count %>  <%= link_to t('account.followers'),followers_user_path(user) %> </p>
+</li>
