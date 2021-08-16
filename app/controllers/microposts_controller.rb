@@ -1,5 +1,5 @@
 class MicropostsController < ApplicationController
-  before_action :logged_in_user, only: [:create, :destroy]
+  before_action :logged_in_user, only: [:create, :destroy, :report, :update]
   before_action :correct_user, only: :destroy
   def create
     @micropost = current_user.microposts.build(microposts_params)
@@ -18,10 +18,16 @@ class MicropostsController < ApplicationController
     redirect_to request.referrer || root_url
   end
 
+  def report
+    # pry()
+    @micropost = Micropost.find_by(id: params[:micropost_id])
+    @reported_comment = @micropost.reported_comments.build
+  end
+
   private
 
   def microposts_params
-    params.require(:micropost).permit(:content, :picture)
+    params.require(:micropost).permit(:content, :picture, :blocked, :reported)
   end
 
   def correct_user

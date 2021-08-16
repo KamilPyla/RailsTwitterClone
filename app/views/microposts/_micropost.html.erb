@@ -9,6 +9,9 @@
     <%= t('time_ago', time: time_ago_in_words(micropost.created_at)) %>
     <% if current_user?(micropost.user) %>
       <%= link_to t('microposts.delete'), micropost, method: :delete, data: { confirm: t('microposts.confirm_del') } %>
+      <p class='blocked'> <%= "Post has been blocked" if micropost.blocked %> </p> 
+    <% else %> 
+      <%= link_to 'report', micropost_report_path(micropost) %>
     <% end %>
   </span>
 </li> 

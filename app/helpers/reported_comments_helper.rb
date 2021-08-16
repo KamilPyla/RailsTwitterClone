@@ -1,0 +1,2 @@
+module ReportedCommentsHelper
+end
