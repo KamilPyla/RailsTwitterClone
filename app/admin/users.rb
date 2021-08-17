@@ -11,6 +11,9 @@ ActiveAdmin.register User do
     column :microposts do |user|
       link_to 'Show user\'s posts', admin_microposts_path(q: { user_id_eq: user.id })
     end
+    column 'number of comments' do |user|
+      user.reported_comments.size
+    end
     column :reported_comments do |user|
       link_to 'Show user\'s reported comments', admin_reported_comments_path(q: { user_id_eq: user.id })
     end
@@ -47,6 +50,10 @@ ActiveAdmin.register User do
       input :gender, :as => :select, :collection => [[],["Male","m"],["Female","f"]]
     end
     actions
+  end
+
+  action_item :return_to_dashboard do
+    link_to 'Dashboard', admin_root_path
   end
 
  

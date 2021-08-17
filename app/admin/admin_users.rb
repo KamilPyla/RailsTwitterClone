@@ -25,4 +25,8 @@ ActiveAdmin.register AdminUser do
     f.actions
   end
 
+  action_item :return_to_dashboard do
+    link_to 'Dashboard', admin_root_path
+  end
+
 end

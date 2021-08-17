@@ -29,6 +29,10 @@ ActiveAdmin.register ReportedComment do
         end
       end
     end
+    
+    action_item :return_to_dashboard do
+      link_to 'Dashboard', admin_root_path
+    end
 
   
 end
