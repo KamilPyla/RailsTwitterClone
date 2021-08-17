@@ -1,18 +1,34 @@
 ActiveAdmin.register ReportedComment do
+    permitted = [:content, :micropost_id, :user_id]
 
-  # See permitted parameters documentation:
-  # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-  #
-  # Uncomment all parameters which should be permitted for assignment
-  #
-  # permit_params :content, :micropost_id
-  #
-  # or
-  #
-  # permit_params do
-    permitted = [:content, :micropost_id]
-  #   permitted << :other if params[:action] == 'create' && current_user.admin?
-  #   permitted
-  # end
+    index do
+      selectable_column
+      id_column
+      column :content
+      column :created_at
+      column :micropost
+      column 'Author', :user
+      column :actions do |comment|
+        link_to('Show', admin_reported_comment_path(comment)) + ' | ' + \
+        link_to('Edit', edit_reported_comment_path(comment)) + ' | ' + \
+        link_to('Delete', admin_reported_comment_path(comment), method: :delete)
+      end
+    end
+
+    show do
+      attributes_table do
+        row :content
+        row :created_at
+        row :micropost do |comment|
+          post = Micropost.find_by(id: comment.micropost_id)
+          link_to 'Micropost#'+post.id.to_s, admin_micropost_path(post)
+        end
+        row "Author", :user do |comment|
+          user = User.find_by(id: comment.user_id)
+          link_to user.name, admin_user_path(user)
+        end
+      end
+    end
+
   
 end
