@@ -1,4 +1,13 @@
+<<<<<<< HEAD
     <li>
       <%= avatar_for(user) %>
       <%= link_to user.name, user %>
     </li>
+=======
+<li>
+  <%= avatar_for(user) %>
+  <%= link_to user.name, user %>
+  <p> <%= user.following.count %>  <%= link_to t('account.following'), following_user_path(user) %> </p>
+  <p> <%= user.followers.count %>  <%= link_to t('account.followers'),followers_user_path(user) %> </p>
+</li>
+>>>>>>> a84bc08eaa91be998b50fb2ed27d6c56153823bf

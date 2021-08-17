@@ -1,4 +1,4 @@
-<% provide(:title, "Home")%>
+<% provide(:title, t('home.title'))%>
 <% if logged_in? %>
   <div class="row">
     <aside class="col-md-4">
@@ -13,7 +13,11 @@
       </section>
     </aside>
     <div class="col-md-8">
+<<<<<<< HEAD
       <h3> <%= t('home.posts')%> </h3>
+=======
+      <h3><%= t('home.posts')%></h3>
+>>>>>>> a84bc08eaa91be998b50fb2ed27d6c56153823bf
       <%= render 'shared/feed' %>
     </div>
   </div>
