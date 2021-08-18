@@ -11,7 +11,7 @@
       <%= link_to t('microposts.delete'), micropost, method: :delete, data: { confirm: t('microposts.confirm_del') } %>
       <p class='blocked'> <%= "Post has been blocked" if micropost.blocked %> </p> 
     <% else %> 
-      <%= link_to 'report', micropost_report_path(micropost) %>
+      <%= link_to t('report.button'), micropost_report_path(micropost) %>
     <% end %>
   </span>
 </li> 

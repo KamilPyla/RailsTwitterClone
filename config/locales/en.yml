@@ -38,6 +38,11 @@ en:
   microposts:
     delete: "delete"
     confirm_del: "You sure?"
+  report: 
+    head: "Report a violation of the portal's policy"
+    question: "Why do you want to report this post?"
+    content: "Write your explanation"
+    button: "Report"
   time_ago: "Posted %{time} ago."
   session:
     login:

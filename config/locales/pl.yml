@@ -38,6 +38,11 @@ pl:
   microposts:
     delete: "usuń"
     confirm_del: "Jesteś pewien?"
+  report: 
+    head: "Zgłoś naruszenie prywatności portalu."
+    question: "Proszę powiedz nam, dlaczego chcesz zgłosić ten post?"
+    content: "Napisz swoje uzasadnienie"
+    button: "zgłoś"
   time_ago: "Utworzono %{time} temu"
   session:
     login:

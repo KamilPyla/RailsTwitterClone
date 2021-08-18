@@ -38,6 +38,11 @@ it:
   microposts:
     delete: "elimina"
     confirm_del: "Sei sicuro?"
+  report: 
+    head: "Segnala una violazione della policy del portale"
+    question: "Perché vuoi segnalare questo post?"
+    content: "Scrivi la tua spiegazione"
+    button: "Segnala"
   time_ago: "Pubblicato %{time} fa."
   session:
     login:
