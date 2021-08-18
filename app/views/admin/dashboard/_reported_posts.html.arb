@@ -1,0 +1,18 @@
+table_for Micropost.reported do |post|
+  post.column('Post id') { |p| p.id }
+  post.column('Author') do |p|
+    author = User.find_by(id: p.user_id) 
+    link_to author.name, admin_user_path(author)
+  end
+  post.column('Contend') { |p| i p.content }
+  post.column('Action') do |p|
+    b link_to('Show post', admin_micropost_path(p)) + ' | ' + \
+    link_to('Show comments', admin_reported_comments_path(q: { micropost_id_eq: p.id }))
+  end
+  post.column('Number of comments') { |p| p.reported_comments.size}
+  post.column('Comments') do |p|
+    p.reported_comments.map do |comment|
+      link_to comment.content, admin_reported_comment_path(comment)
+    end
+  end
+end
