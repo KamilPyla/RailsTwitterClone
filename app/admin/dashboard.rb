@@ -11,8 +11,8 @@ ActiveAdmin.register_page "Dashboard" do
       end
       column do
         panel "Filters" do
-          ul b link_to 'Show all reported posts', admin_microposts_path(q: {scope: :reported})
-          ul b link_to 'Show all blocked posts', admin_microposts_path(q: {scope: :blocked})
+          ul b link_to 'Show all reported posts', admin_microposts_path(scope: :reported)
+          ul b link_to 'Show all blocked posts', admin_microposts_path(scope: :blocked)
           
         end
       end
