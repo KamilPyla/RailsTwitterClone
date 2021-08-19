@@ -27,6 +27,7 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+/.internship_pro_token.key
 
 /public/packs
 /public/packs-test
