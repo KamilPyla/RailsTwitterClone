@@ -19,7 +19,6 @@ class MicropostsController < ApplicationController
   end
 
   def report
-    # pry()
     @micropost = Micropost.find_by(id: params[:micropost_id])
     @reported_comment = @micropost.reported_comments.build
   end
@@ -27,7 +26,7 @@ class MicropostsController < ApplicationController
   private
 
   def microposts_params
-    params.require(:micropost).permit(:content, :picture, :blocked, :reported)
+    params.require(:micropost).permit(:content, :category_id, :picture, :blocked, :reported)
   end
 
   def correct_user

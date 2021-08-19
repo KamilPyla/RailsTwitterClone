@@ -1,11 +1,4 @@
 ActiveAdmin.register Category do
+  permit_params :name_en, :name_pl, :name_it, :name_cn
 
-  permit_params :name
-
-  # permit_params do
-  #   permitted = [:lebel]
-    # permitted << :other if params[:action] == 'create' && current_user.admin?
-  #   permitted
-  # end
-  
 end

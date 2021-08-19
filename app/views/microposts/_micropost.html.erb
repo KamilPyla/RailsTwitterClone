@@ -4,7 +4,7 @@
   <span class="content">
     <i> <%= t('category.category')%>
     <% if micropost.category %>
-      <%= micropost.category.name  %>
+      <%= proper_category_language(micropost.category) %>
     <% else %>
       <%= t('category.no_category') %>
     <% end %>

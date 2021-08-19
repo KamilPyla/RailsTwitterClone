@@ -1,5 +1,5 @@
 ActiveAdmin.register ReportedComment do
-    permitted = [:content, :micropost_id, :user_id]
+  permit_params :content, :micropost_id, :user_id
 
     index do
       selectable_column

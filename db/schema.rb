@@ -42,7 +42,10 @@ ActiveRecord::Schema.define(version: 2021_08_19_063959) do
   end
 
   create_table "categories", force: :cascade do |t|
-    t.string "name"
+    t.string "name_en"
+    t.string "name_pl"
+    t.string "name_it"
+    t.string "name_cn"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

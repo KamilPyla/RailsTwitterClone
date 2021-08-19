@@ -10,7 +10,9 @@ ActiveAdmin.register Micropost do
     selectable_column
     id_column
     column :content
-    column :category
+    column :category do |post|
+      post.category.name_en if post.category
+    end
     column :created_at
     column 'Author', :user
     column :reported_comments do |post|

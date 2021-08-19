@@ -1,12 +1,13 @@
 <%= form_for(@micropost, html: { multipart: true }) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
+  <%= f.select :category_id, create_select_for_category, {}, class: 'form-control' %>
   <div class="field">
     <%= f.text_area :content, placeholder: t('forms.micropost.content', name: current_user.name) %>
   <div>
-  <%= f.submit t('forms.micropost.button'), class: "btn btn-primary" %>
   <span class="picture">
     <%= f.file_field :picture, accept: 'image/jpeg, image/gif, image/png' %>
   </span>
+  <%= f.submit t('forms.micropost.button'), class: "btn btn-primary" %>
   <% end %>
 
 <script type="text/javascript">
