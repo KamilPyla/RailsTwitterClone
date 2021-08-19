@@ -4,12 +4,13 @@ ActiveAdmin.register Micropost do
   scope :reported
   scope :blocked
 
-  permit_params :content, :user_id, :picture, :blocked, :reported
+  permit_params :content, :user_id, :category_id, :picture, :blocked, :reported
 
   index do
     selectable_column
     id_column
     column :content
+    column :category
     column :created_at
     column 'Author', :user
     column :reported_comments do |post|

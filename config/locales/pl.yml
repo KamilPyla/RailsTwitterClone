@@ -38,6 +38,9 @@ pl:
   microposts:
     delete: "usuń"
     confirm_del: "Jesteś pewien?"
+  category:
+    category: 'Kategoria: '
+    no_category: 'Brak kategorii'
   report: 
     head: "Zgłoś naruszenie prywatności portalu."
     question: "Proszę powiedz nam, dlaczego chcesz zgłosić ten post?"

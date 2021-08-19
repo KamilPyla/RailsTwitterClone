@@ -38,6 +38,9 @@ en:
   microposts:
     delete: "delete"
     confirm_del: "You sure?"
+  category:
+    category: 'Category: '
+    no_category: 'No category'
   report: 
     head: "Report a violation of the portal's policy"
     question: "Why do you want to report this post?"

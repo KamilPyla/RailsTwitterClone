@@ -38,6 +38,9 @@ cn:
   microposts:
     delete: "刪除"
     confirm_del: "你確定？"
+  category:
+    category: '類別: '
+    no_category: '沒有類別'
   report: 
     head: "舉報違反門戶政策的行為"
     question: "你為什麼要舉報這個帖子？"

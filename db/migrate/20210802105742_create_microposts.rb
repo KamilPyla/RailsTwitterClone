@@ -3,6 +3,7 @@ class CreateMicroposts < ActiveRecord::Migration[6.1]
     create_table :microposts do |t|
       t.text :content
       t.references :user, null: false, foreign_key: true
+      t.references :category, null: true
 
       t.timestamps
     end

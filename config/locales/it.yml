@@ -38,6 +38,9 @@ it:
   microposts:
     delete: "elimina"
     confirm_del: "Sei sicuro?"
+  category:
+    category: 'Categoria: '
+    no_category: 'Nessuna categoria'
   report: 
     head: "Segnala una violazione della policy del portale"
     question: "Perché vuoi segnalare questo post?"
