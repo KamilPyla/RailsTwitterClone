@@ -3,8 +3,24 @@ ActiveAdmin.register Micropost do
   scope :all
   scope :reported
   scope :blocked
-
+  
   permit_params :content, :user_id, :category_id, :picture, :blocked, :reported
+  
+  form do |f|
+    def categories_select
+      categories = Category.all
+      categories.map do |cat|
+        [cat.name_en, cat.id]
+      end.push(['No category',nil]).reverse!
+    end
+    inputs 'Details' do
+      input :user
+      input :category, :as => :select, collection: Category.all.map { |c| [c.name_en, c.id] }
+      input :content
+      input :picture
+    end
+    actions
+  end
 
   index do
     selectable_column
@@ -30,6 +46,9 @@ ActiveAdmin.register Micropost do
   show do
     attributes_table do  
       row :content
+      row :category do |post|
+        post.category.name_en if post.category
+      end
       row :created_at
       row 'Author' do |post|
         user = User.find_by(id: post.user_id)
