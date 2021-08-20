@@ -7,12 +7,6 @@ ActiveAdmin.register Micropost do
   permit_params :content, :user_id, :category_id, :picture, :blocked, :reported
   
   form do |f|
-    def categories_select
-      categories = Category.all
-      categories.map do |cat|
-        [cat.name_en, cat.id]
-      end.push(['No category',nil]).reverse!
-    end
     inputs 'Details' do
       input :user
       input :category, :as => :select, collection: Category.all.map { |c| [c.name_en, c.id] }
