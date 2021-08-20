@@ -46,6 +46,8 @@ cn:
     question: "你為什麼要舉報這個帖子？"
     content: "寫下你的解釋"
     button: "報告"
+  blocked:
+    alert: "帖子被屏蔽了"
   time_ago: "%{time} 前發布。"
   session:
     login:

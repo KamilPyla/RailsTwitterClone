@@ -46,6 +46,8 @@ it:
     question: "Perché vuoi segnalare questo post?"
     content: "Scrivi la tua spiegazione"
     button: "Segnala"
+  blocked:
+    alert: "Il post è stato bloccato."
   time_ago: "Pubblicato %{time} fa."
   session:
     login:

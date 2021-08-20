@@ -46,6 +46,8 @@ pl:
     question: "Proszę powiedz nam, dlaczego chcesz zgłosić ten post?"
     content: "Napisz swoje uzasadnienie"
     button: "zgłoś"
+  blocked:
+    alert: "Post został zablokowany."
   time_ago: "Utworzono %{time} temu"
   session:
     login:
