@@ -6,7 +6,7 @@ class Micropost < ApplicationRecord
   validates :user_id, presence: true
   validates :content, presence: true, length: { maximum: 140 }
   validate :picture_size
-  has_many :reported_comments
+  has_many :reported_comments, dependent: :destroy
 
   scope :reported, ->{ where(reported: true) }
   scope :blocked, ->{ where(blocked: true) }
