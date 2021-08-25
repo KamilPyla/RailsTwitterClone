@@ -28,10 +28,10 @@
                 <%= t'global.language'%> <b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
-                <li><%= link_to 'en', root_path(locale: :en) %></li>
-                <li><%= link_to 'pl', root_path(locale: :pl) %></li>
-                <li><%= link_to 'it', root_path(locale: :it) %></li>
-                <li><%= link_to 'cn', root_path(locale: :cn) %></li>
+                <li><%= link_to 'en', url_for(locale: :en) %></li>
+                <li><%= link_to 'pl', url_for(locale: :pl) %></li>
+                <li><%= link_to 'it', url_for(locale: :it) %></li>
+                <li><%= link_to 'cn', url_for(locale: :cn) %></li>
               </ul>
             </li>
         </ul>
